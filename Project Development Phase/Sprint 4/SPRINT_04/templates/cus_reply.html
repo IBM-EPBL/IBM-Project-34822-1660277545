@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Customer Care Registry</title>
+</head>
+
+<body>
+<h3>Reply</h3>
+{% for rs in data %}
+<table width="100%">
+<tr>
+<th style="background-color:#0033CC; color:#FFFFFF; line-height:30px; height:30px;" align="left">{{loop.index}}.Reply on {{rs[5]}}</th>
+</tr>
+<tr>
+<td>Status: {% if rs[3]==2 %}
+										  <span style="color:#009900">Solved</span>
+										  {% elif rs[3]==1 %}
+										  <span style="color:#0066CC">Processing</span>
+										  {% else %}
+										  Wait for Process
+										  {% endif %}</td>
+</tr>
+<tr>
+<td>Reply: {{rs[4]}}</td>
+</tr>
+</table>
+{% endfor %}
+</body>
+</html>

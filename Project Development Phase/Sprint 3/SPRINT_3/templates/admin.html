@@ -1,0 +1,360 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title> Customer Care Registry  </title>
+      <!-- Favicon -->
+      <link rel="icon" href="../static/assets/images/favicon.png" type="image/x-icon" />
+      <!-- Bootstrap CSS -->
+      <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Animate CSS -->
+      <link href="../static/assets/vendors/animate/animate.css" rel="stylesheet">
+      <!-- Icon CSS-->
+      <link rel="stylesheet" href="../static/assets/vendors/font-awesome/css/font-awesome.min.css">
+      <!-- Camera Slider -->
+      <link rel="stylesheet" href="../static/assets/vendors/camera-slider/camera.css">
+      <!-- Owlcarousel CSS-->
+      <link rel="stylesheet" type="text/css" href="../static/assets/vendors/owl_carousel/owl.carousel.css" media="all">
+      <!--Template Styles CSS-->
+      <link rel="stylesheet" type="text/css" href="../static/assets/css/style.css" media="all" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+<script language="javascript">
+function validate()
+{
+	if(document.form1.name.value=="")
+	{
+	alert("Enter the Name");
+	document.form1.name.focus();
+	return false;
+	}
+	if(document.form1.address.value=="")
+	{
+	alert("Enter the Address");
+	document.form1.address.focus();
+	return false;
+	}
+	if(document.form1.mobile.value=="")
+	{
+	alert("Enter the Mobile No.");
+	document.form1.mobile.focus();
+	return false;
+	}
+	if(isNaN(document.form1.mobile.value))
+	{
+	alert("Invalid Mobile No.");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.mobile.value.length!=10)
+	{
+	alert("Mobile No. must be 10 digits!");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.email.value=="")
+	{
+	alert("Enter the Email");
+	document.form1.email.focus();
+	return false;
+	}
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.form1.email.value))  
+	{
+	
+	}
+	else
+	{
+	alert("Invalid E-mail!");
+	document.form1.email.select();
+	return false;
+	}
+	if(document.form1.uname.value=="")
+	{
+	alert("Enter the Username");
+	document.form1.uname.focus();
+	return false;
+	}
+	if(document.form1.pass.value=="")
+	{
+	alert("Enter the Password");
+	document.form1.pass.focus();
+	return false;
+	}
+	if(document.form1.cpass.value=="")
+	{
+	alert("Enter the Confirm Password");
+	document.form1.cpass.focus();
+	return false;
+	}
+	if(document.form1.pass.value!=document.form1.cpass.value)
+	{
+	alert("Password does not match!");
+	document.form1.cpass.select();
+	return false;
+	}
+return true;
+}
+</script>
+
+   </head>
+   <body id="top">
+      <div class="about-bg-banner-img">
+         <div class="overlay-all ">
+            <!-- Header_Area -->
+            <!-- header
+               ================================================== -->
+            <header class="s-header">
+               <div class="header-logo">
+                  <a class="navbar-brand logo-biss" href="index.html"> <img src="../static/assets/images/logo.png"></a>
+               </div>
+               <!-- end header-logo -->
+               <nav class="header-nav">
+                  <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+                  <div class="header-nav__content">
+                     <h3>Customer Care </h3>
+                     <ul class="header-nav__list">
+                        <li class="current"><a class=""  href="/admin" >Home</a></li>
+                           <li><a class=""  href="/view_agent" >Agent</a></li>
+                           <li><a class=""  href="/view_customer" >Customers</a></li>
+                           <li><a class=""  href="/view_feedback" >Feedback</a></li>
+						   <li><a class=""  href="/logout" >Logout</a></li>
+                     </ul>
+                     <ul class="header-nav__social">
+                        <li>
+                           <a href="" target="_blank"><i  class="fa fa-facebook-square fa-3x social"></i></a>
+                        </li>
+                        <li>
+                           <a href="" target="_blank"><i  class="fa fa-twitter-square fa-3x social"></i></a>
+                        </li>
+                        <li>
+                           <a href="" target="_blank"><i  class="fa fa-instagram fa-3x social"></i></a>
+                        </li>
+                        <li>
+                           <a href="#0"><i class="fa fa-facebook-square fa-3x social"></i></a>
+                        </li>
+                       
+                     </ul>
+                  </div>
+                  <!-- end header-nav__content -->
+               </nav>
+               <!-- end header-nav -->
+               <a class="header-menu-toggle" href="#0">
+               <span class="header-menu-icon"></span>
+               </a>
+            </header>
+            <!-- end s-header -->
+            <!-- End Header_Area -->
+            <!-- #banner start -->
+            <section id="banner" class="py_120">
+               <div class="container ">
+                  <div class="row">
+                     <!-- #banner-text start -->            
+                     <div id="banner-text" class="col-md-7 text-c text-left ">
+                        <h5 class="wow fadeInUp main-h font_30" data-wow-delay="0.2s" >Customer Care
+                           <br><span class="about_text "> Admin</span>  
+                        </h5>
+                        
+                     </div>
+                     <!-- /#banner-text End -->
+                  </div>
+               </div>
+            </section>
+            <div class="container-fluid p0 banner-shap-img">
+            </div>
+         </div>
+      </div>
+      <!-- /#banner end -->
+      <!--#Our banner-shap- Area -->
+      <!--#EndOur banner-shap- Area -->
+      <!-- #About Us Area start -->
+      <div  id="about"  class=" py-70 pb_90">
+         <div class="container ">
+            <div class="row text-left  ">
+               <div class="col-md-7">
+                  <div class="about_left_text_top wow fadeInUp">
+                     <h3>Add Agent</h3>
+                     <form name="form1" id="contactForm" method="post" class="contact-form" action="">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-6 col-md-12">
+                              <input type="text" class="medium-input" maxlength="30" placeholder="Name *" name="name" required>
+                           </div>
+						   <div class="col-xs-12 col-sm-6 col-md-12">
+                              <input type="text" class="medium-input" maxlength="70" placeholder="Agent Location *" name="address" required>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-md-6">
+                              <input type="text" class="medium-input" maxlength="10" placeholder="Mobile No. *" name="mobile" required>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 col-md-6">
+                              <input type="text" class="medium-input" maxlength="50" placeholder="E-mail *" name="email" required>
+                           </div>
+						   <div class="col-xs-12 col-sm-6 col-md-12">
+                              <select class="medium-input" name="problem_type">
+							  <option value="">-Problems-</option>
+							  <option>Inability to Access UI</option>
+							  <option>Data Storage Problem</option>
+							  <option>Time Limitations</option>
+							  <option>Security Problem</option>
+							  <option>Execution Speed</option>
+							  <option>Design/Loading Problem</option>
+							  <option>Features Required</option>
+							  </select>
+                           </div>
+						   
+                           <div class="col-md-12 sm-margin-30px-bottom">
+                              <div class="top-contact wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
+                                 <button type="submit" id="#services" href="#services" class="btn btn-primary wow fadeInUp  js-scroll-trigger" data-wow-delay=" 0.5s" style="visibility: visible; animation-delay:  0.5s; animation-name: fadeInUp;" onClick="return validate()">Add</button>
+                              </div>
+							  <span style="color:#FF0000">{{msg}}</span>
+                           </div>
+                        </div>
+                     </form>
+					 {% if act=="1" %}
+					 <span style="color:#009900">Agent Information Added Successfully</span>
+							 
+					 <iframe src="http://iotcloud.co.in/testmail/testmail1.php?message={{mess}}&email={{email}}&subject=Agent" width="100" height="100" frameborder="1"></iframe>
+					
+					 <script language="javascript">
+        setTimeout("callitrept()", 3000);
+        function callitrept() {
+		window.location.href="/admin";
+        }
+	</script>
+					 {% endif %}
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <img src="../static/assets/images/mg3.png" class="img_radius">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- #About Us Area End -->
+      <!-- #video  Area start -->
+      
+      <!-- #End video Area start -->
+      <!-- #service Us Area start -->
+      
+      <!--#End service-text  -->
+      <!--#Our Testimonial Area start-->
+      
+      <!--#End Our testimonial Area -->
+      <!--#Our-Team-text start --> 
+      
+      <!--#Our-Team-text End --> 
+      <!--#Our Partners Area -->
+     
+      <!--#End Our Partners Area -->
+      
+      <!--#start Our footer Area -->
+      <div class="our_footer_area">
+         <div class="book_now_aera ">
+            <div class="container wow fadeInUp">
+               <div class="row book_now">
+                  <div class="col-md-4">
+                     <div class="">
+                        <a class=" logo-biss" href="index.html">  <img src="../static/assets/images/logo.png"></a>
+                     </div>
+                     <div class="bigpixi-footer-social">
+                        <a href="" target="_blank" class="ml-15"><i id="social-fb" class="fa fa-facebook fa-2x social"></i></a>
+                        <a href="" target="_blank" class="ml-15"><i id="social-tw" class="fa fa-twitter fa-2x social"></i></a>
+                        <a href="" target="_blank" class="ml-15"><i id="social-em" class="fa fa-instagram fa-2x social"></i></a>
+                        <a href="" target="_blank" class="ml-15"><i id="social-em" class="fa fa-linkedin fa-2x social"></i></a>
+                     </div>
+                   
+                  </div>
+                  <div class="col-md-1 ">
+                  </div>
+                  <div class="col-md-3">
+                     <h2 class="footer-top">Links </h2>
+                     <ul class="footer-menu">
+                        <li><a href="/admin"><i class="fa fa-angle-double-right ml-15"></i> Home</a></li>
+                        <li><a href="/view_agent"><i class="fa fa-angle-double-right ml-15"></i> Agent</a> </li>
+                        <li><a href="/view_customer"><i class="fa fa-angle-double-right ml-15"></i> Customers</a> </li>
+                        <li><a href="/logout"><i class="fa fa-angle-double-right ml-15"></i> Logout</a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4">
+                     <ul class="location">
+                        <li class="footer-left-h"><i class="fa fa-map-marker"></i>Address<br>Chennai, Tamilnadu, <br>India</li>
+                        <li class="footer-left-h"><i class="fa fa-phone"></i>Call Us <br>+1- 982-8-587 452
+                          
+                        </li>
+                        <li class="footer-left-h"><i class="fa fa-envelope-o"></i>Email<br>
+                           <a href=""> enquiry@careinfo.com </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-12">
+                     <p class="color-gray">Customer Care Registry <a href="https://www.navthemes.com"> </a> <a href="https://themewagon.com/"></a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--#End Our footer Area -->
+      <!-- The following is only needed when the video is in the html
+         otherwise the who .hero__overlay html can be removed -->
+      <div class="hero__overlay">
+         <div class="hero__modal">
+            <a class="hero__close" href="#">Close</a>
+            <iframe allowscriptaccess="always" id="hero-video" class="hero__player" src="https://www.youtube.com/embed/1NSA8ycGfKg?enablejsapi=1&html5=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+         </div>
+         <!-- /.hero__modal -->    
+      </div>
+      <!-- /.hero__overlay -->
+      <!-- jQuery JS -->
+      <script src="../static/assets/js/jquery-1.12.0.min.js"></script>
+      <script src="../static/assets/vendors/popup/lightbox.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+         $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+           e.preventDefault();
+           $(this).siblings('a.active').removeClass("active");
+           $(this).addClass("active");
+           var index = $(this).index();
+           $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+           $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+         });
+         });
+      </script> 
+      <script type="text/javascript">
+         $(document).ready(function(){
+           $(".currency_year").hide();
+             $("#radio1").click(function(){
+                 $(".currency_year").hide();
+                 $(".currency_month").show();
+             });
+             $("#radio2").click(function(){
+                 $(".currency_month").hide();
+                 $(".currency_year").show();
+             });
+         });
+         
+          $('.tabs_label').click(function(){
+                      $('.tabs_label').removeClass('active_t');
+                      $(this).addClass('active_t');
+         
+                  })
+               
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+             $('#sidebarCollapse').on('click', function () {
+                 $('#sidebar').toggleClass('active');
+                 $(this).toggleClass('active');
+             });
+         });
+      </script>
+      <!-- Bootstrap JS -->
+      <script src="../static/assets/js/bootstrap.min.js"></script>
+      <!-- Animate JS -->
+      <script src="../static/assets/vendors/animate/wow.min.js"></script>
+      <script src="../static/assets/vendors/sidebar/main.js"></script>
+      <!-- Owlcarousel JS -->
+      <script src="../static/assets/vendors/owl_carousel/owl.carousel.min.js"></script>
+      <!-- Stellar JS-->
+      <!-- Theme JS -->
+      <script src="../static/assets/js/theme.min.js"></script>
+   </body>
+</html>

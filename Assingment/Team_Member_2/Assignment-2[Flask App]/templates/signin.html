@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block head %}
+<title>Sign-In Page</title>
+{% endblock %} 
+{% block body %}
+<center><h1>SIGN IN</h1></center>
+<form action="/signip" method="post">
+  <label>Email</label><br />
+  <input type="email" id="" /><br /><br />
+  <label>Password</label><br />
+  <input type="password" id="" /><br /><br /><br />
+  <input type="submit" value="Submit" class="btn btn-primary" />
+</form>
+{% endblock %}

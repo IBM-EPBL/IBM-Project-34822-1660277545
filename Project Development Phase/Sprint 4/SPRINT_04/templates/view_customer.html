@@ -1,0 +1,258 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title> Customer Care Registry  </title>
+      <!-- Favicon -->
+      <link rel="icon" href="../static/assets/images/favicon.png" type="image/x-icon" />
+      <!-- Bootstrap CSS -->
+      <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Animate CSS -->
+      <link href="../static/assets/vendors/animate/animate.css" rel="stylesheet">
+      <!-- Icon CSS-->
+      <link rel="stylesheet" href="../static/assets/vendors/font-awesome/css/font-awesome.min.css">
+      <!-- Camera Slider -->
+      <link rel="stylesheet" href="../static/assets/vendors/camera-slider/camera.css">
+      <!-- Owlcarousel CSS-->
+      <link rel="stylesheet" type="text/css" href="../static/assets/vendors/owl_carousel/owl.carousel.css" media="all">
+      <!--Template Styles CSS-->
+      <link rel="stylesheet" type="text/css" href="../static/assets/css/style.css" media="all" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+
+
+   </head>
+   <body id="top">
+      <div class="about-bg-banner-img">
+         <div class="overlay-all ">
+            <!-- Header_Area -->
+            <!-- header
+               ================================================== -->
+            <header class="s-header">
+               <div class="header-logo">
+                  <a class="navbar-brand logo-biss" href="index.html"> <img src="../static/assets/images/logo.png"></a>
+               </div>
+               <!-- end header-logo -->
+               <nav class="header-nav">
+                  <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+                  <div class="header-nav__content">
+                     <h3>Customer Care </h3>
+                     <ul class="header-nav__list">
+                        <li class="current"><a class=""  href="/admin" >Home</a></li>
+                           <li><a class=""  href="/view_agent" >Agent</a></li>
+                           <li><a class=""  href="/view_customer" >Customers</a></li>
+                           <li><a class=""  href="/view_feedback" >Feedback</a></li>
+						   <li><a class=""  href="/logout" >Logout</a></li>
+                     </ul>
+                     <ul class="header-nav__social">
+                        <li>
+                           <a href="" target="_blank"><i  class="fa fa-facebook-square fa-3x social"></i></a>
+                        </li>
+                        <li>
+                           <a href="" target="_blank"><i  class="fa fa-twitter-square fa-3x social"></i></a>
+                        </li>
+                        <li>
+                           <a href="" target="_blank"><i  class="fa fa-instagram fa-3x social"></i></a>
+                        </li>
+                        <li>
+                           <a href="#0"><i class="fa fa-facebook-square fa-3x social"></i></a>
+                        </li>
+                       
+                     </ul>
+                  </div>
+                  <!-- end header-nav__content -->
+               </nav>
+               <!-- end header-nav -->
+               <a class="header-menu-toggle" href="#0">
+               <span class="header-menu-icon"></span>
+               </a>
+            </header>
+            <!-- end s-header -->
+            <!-- End Header_Area -->
+            <!-- #banner start -->
+            <section id="banner" class="py_120">
+               <div class="container ">
+                  <div class="row">
+                     <!-- #banner-text start -->            
+                     <div id="banner-text" class="col-md-7 text-c text-left ">
+                        <h5 class="wow fadeInUp main-h font_30" data-wow-delay="0.2s" >Customer Care
+                           <br><span class="about_text "> Admin</span>  
+                        </h5>
+                        
+                     </div>
+                     <!-- /#banner-text End -->
+                  </div>
+               </div>
+            </section>
+            <div class="container-fluid p0 banner-shap-img">
+            </div>
+         </div>
+      </div>
+      <!-- /#banner end -->
+      <!--#Our banner-shap- Area -->
+      <!--#EndOur banner-shap- Area -->
+      <!-- #About Us Area start -->
+     
+      <!-- #About Us Area End -->
+      <!-- #video  Area start -->
+     
+      <!-- #End video Area start -->
+      <!-- #service Us Area start -->
+     
+      <!--#End service-text  -->
+      <!--#Our Testimonial Area start-->
+      
+      <!--#End Our testimonial Area -->
+      <!--#Our-Team-text start --> 
+      <section>
+         <div class="container">
+            <div class="row text-center mb-60 ">
+               <div class="title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <h1>Customers</h1>
+                  <p></p>
+               </div>
+            </div>
+			
+			
+            <div class="row about_row  py-40">
+			{% for rs in data %}
+               <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <div class="service-Team">
+                     <div class="servise-top wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                        <img src="../static/assets/images/profile.jpg">
+                     </div>
+                     <h2 class="unify_about"> {{rs[1]}} </h2>
+                     <h2 class="unify_about"> [{{rs[5]}}] </h2>
+                     <p class="bottom-s">Address: {{rs[2]}}</p>
+					 <p class="bottom-s">Mobile: {{rs[3]}}</p>
+					 <p class="bottom-s">E-mail: {{rs[4]}}</p>
+                     <div class="bigpixi-Team-social">
+                        <a href="/view_agent?act=del&did={{rs[0]}}">Delete</a>
+                     </div>
+                  </div>
+               </div>
+              {% endfor %}
+               
+               <!--#End service-text  --> 
+            </div>
+			
+         </div>
+      </section>
+      <!--#Our-Team-text End --> 
+      <!--#Our Partners Area -->
+     
+      <!--#End Our Partners Area -->
+      
+      <!--#start Our footer Area -->
+      <div class="our_footer_area">
+         <div class="book_now_aera ">
+            <div class="container wow fadeInUp">
+               <div class="row book_now">
+                  <div class="col-md-4">
+                     <div class="">
+                        <a class=" logo-biss" href="index.html">  <img src="../static/assets/images/logo.png"></a>
+                     </div>
+                     <div class="bigpixi-footer-social">
+                        <a href="" target="_blank" class="ml-15"><i id="social-fb" class="fa fa-facebook fa-2x social"></i></a>
+                        <a href="" target="_blank" class="ml-15"><i id="social-tw" class="fa fa-twitter fa-2x social"></i></a>
+                        <a href="" target="_blank" class="ml-15"><i id="social-em" class="fa fa-instagram fa-2x social"></i></a>
+                        <a href="" target="_blank" class="ml-15"><i id="social-em" class="fa fa-linkedin fa-2x social"></i></a>
+                     </div>
+                   
+                  </div>
+                  <div class="col-md-1 ">
+                  </div>
+                  <div class="col-md-3">
+                     <h2 class="footer-top">Links </h2>
+                     <ul class="footer-menu">
+                        <li class="current"><a class=""  href="/admin" >Home</a></li>
+                           <li><a class=""  href="/view_agent" >Agent</a></li>
+                           <li><a class=""  href="/view_customer" >Customers</a></li>
+						   <li><a class=""  href="/logout" >Logout</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4">
+                     <ul class="location">
+                        <li class="footer-left-h"><i class="fa fa-map-marker"></i>Address<br>Chennai, Tamilnadu, <br>India</li>
+                        <li class="footer-left-h"><i class="fa fa-phone"></i>Call Us <br>+1- 982-8-587 452
+                          
+                        </li>
+                        <li class="footer-left-h"><i class="fa fa-envelope-o"></i>Email<br>
+                           <a href=""> enquiry@careinfo.com </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-12">
+                     <p class="color-gray">Customer Care Registry <a href="https://www.navthemes.com"> </a> <a href="https://themewagon.com/"></a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--#End Our footer Area -->
+      <!-- The following is only needed when the video is in the html
+         otherwise the who .hero__overlay html can be removed -->
+      <div class="hero__overlay">
+         <div class="hero__modal">
+            <a class="hero__close" href="#">Close</a>
+            <iframe allowscriptaccess="always" id="hero-video" class="hero__player" src="https://www.youtube.com/embed/1NSA8ycGfKg?enablejsapi=1&html5=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+         </div>
+         <!-- /.hero__modal -->    
+      </div>
+      <!-- /.hero__overlay -->
+      <!-- jQuery JS -->
+      <script src="../static/assets/js/jquery-1.12.0.min.js"></script>
+      <script src="../static/assets/vendors/popup/lightbox.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+         $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+           e.preventDefault();
+           $(this).siblings('a.active').removeClass("active");
+           $(this).addClass("active");
+           var index = $(this).index();
+           $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+           $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+         });
+         });
+      </script> 
+      <script type="text/javascript">
+         $(document).ready(function(){
+           $(".currency_year").hide();
+             $("#radio1").click(function(){
+                 $(".currency_year").hide();
+                 $(".currency_month").show();
+             });
+             $("#radio2").click(function(){
+                 $(".currency_month").hide();
+                 $(".currency_year").show();
+             });
+         });
+         
+          $('.tabs_label').click(function(){
+                      $('.tabs_label').removeClass('active_t');
+                      $(this).addClass('active_t');
+         
+                  })
+               
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+             $('#sidebarCollapse').on('click', function () {
+                 $('#sidebar').toggleClass('active');
+                 $(this).toggleClass('active');
+             });
+         });
+      </script>
+      <!-- Bootstrap JS -->
+      <script src="../static/assets/js/bootstrap.min.js"></script>
+      <!-- Animate JS -->
+      <script src="../static/assets/vendors/animate/wow.min.js"></script>
+      <script src="../static/assets/vendors/sidebar/main.js"></script>
+      <!-- Owlcarousel JS -->
+      <script src="../static/assets/vendors/owl_carousel/owl.carousel.min.js"></script>
+      <!-- Stellar JS-->
+      <!-- Theme JS -->
+      <script src="../static/assets/js/theme.min.js"></script>
+   </body>
+</html>
